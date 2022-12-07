@@ -1,0 +1,199 @@
+function getcomputerChoice(){
+    const choices = ['r', 'p', 's', 'l', 'sp'];
+    const randomNumber = Math.floor(Math.random() * 5);
+    return choices[randomNumber];
+}
+
+function win(){
+    console.log("win");
+}
+function lose(){
+    console.log("lost");
+}
+function draw(){
+    console.log("draw");
+}
+
+function game(userChoice){
+    const computerChoice = getcomputerChoice();
+    switch (userChoice + computerChoice) {
+        case "rs":
+        case "pr":
+        case "sp":
+        case "rl":
+        case "sps":
+        case "sl":
+        case "lp":
+        case "psp":
+        case "spr":
+        case "lsp":
+            win();
+            break;
+        case "sr":
+        case "rp":
+        case "ps":
+        case "lr":
+        case "ssp":
+        case "ls":
+        case "pl":
+        case "spp":
+        case "rsp":
+        case "spl":
+            lose();
+            break;
+        case "sr":
+        case "rr":
+        case "pp":
+        case "ss":
+        case "ll":
+        case "spsp":
+            draw();
+            break;
+        
+     }
+}
+
+function main(){
+    rock_div.addEventListener('click', function() {
+        game("r");
+    })
+    paper_div.addEventListener('click', function() {
+        game("p");
+    })
+    scissor_div.addEventListener('click', function() {
+        game("s");
+    })
+    lizard_div.addEventListener('click', function() {
+        game("l");
+    })
+    spock_div.addEventListener('click', function() {
+        game("sp");
+    })
+    
+}
+main();
+
+
+
+
+
+
+ /**function fun1()
+        {
+           console.log("u cliked on rock");
+            a= 1;
+            console.log(compChoice());
+        
+            if (compChoice()>a)
+                {
+                   console.log("comp win!! ") ;
+
+                }
+                else if(a>compChoice())
+                {
+                    console.log("you win!!");
+
+                }
+                else
+                {
+                    console.log("draw !!");
+                }
+                
+
+
+        }
+        function fun2()
+        {
+           console.log("u cliked on paper");
+            a= 2;
+            console.log(compChoice());
+            if (compChoice()>a)
+                {
+                   console.log("comp win!! ") ;
+                }
+                else if(a>compChoice())
+                {
+                    console.log("you win!!");
+                }
+                else
+                {
+                    console.log("draw !!");
+                }
+               
+
+        }
+        function fun3()
+        {
+           console.log("u cliked on sciccors");
+         a= 3;
+         console.log(compChoice());
+         if (compChoice()>a)
+                {
+                   console.log("comp win!! ") ;
+                }
+                else if(a>compChoice())
+                {
+                    console.log("you win!!");
+                }
+                else
+                {
+                    console.log("draw !!");
+                }
+               
+        }
+        function fun4()
+        {
+            console.log("u cliked on lizard ");
+             a= 4;
+             console.log(compChoice());
+             if (compChoice()>a)
+                {
+                   console.log("comp win!! ") ;
+                }
+                else if(a>compChoice())
+                {
+                    console.log("you win!!");
+                }
+                else
+                {
+                    console.log("draw !!");
+                }
+                
+        }
+        function fun5()
+        {
+           console.log("u cliked on spork");
+             a= 5;
+             console.log(compChoice());
+             if (compChoice()>a)
+                {
+                   console.log("comp win!! ") ;
+                   computer-score++;
+                }
+                else if(a>compChoice())
+                {
+                    console.log("you win!!");
+                }
+                else
+                {
+                    console.log("draw !!");
+                }           
+        }*/
+
+
+         /**if (compChoice()>a)
+                {
+                   console.log("comp win!! ") ;
+                   score++;
+                   document.getElementById("computer-score").innerHTML=score;
+                }
+                else if(a>compChoice())
+                {
+                    console.log("you win!!");
+                    score1++;
+                    document.getElementById("user-score").innerHTML=score1;
+                }
+                else
+                {
+                    console.log("draw !!");
+                }*/

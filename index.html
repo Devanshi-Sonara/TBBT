@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBBT Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <script  charset="UTF-8" >
+        function compChoice()
+        {
+
+            return Math.floor(Math.random() * 4)+1;
+            
+        }
+        setTimeout(compChoice(), 50);
+        
+        var a;
+        var score=0;
+        var score1=0;
+        function randomReturn(){
+            if(compChoice==1){
+                document.getElementById("random").innerHTML="Computer choose Rock!";
+            }
+            else if(compChoice==2){
+                document.getElementById("random").innerHTML="Computer choose Paper!";
+            }
+            else if(compChoice==3){
+                document.getElementById("random").innerHTML="Computer choose Scissors!";
+            }
+            else if(compChoice==4){
+                document.getElementById("random").innerHTML="Computer choose Lizard!";
+            }
+            else {
+                document.getElementById("random").innerHTML="Computer choose Sporks!";
+            }
+        }
+
+        
+
+        function demo(el)
+        { 
+            var amount = el.value; 
+    
+            console.log("u cliked on ="+amount);
+            if(amount==1 )
+            {
+                console.log("u cliked on rock");
+                a= 1;
+                document.getElementById("random1").innerHTML="you selected Rock";
+                console.log("comp choice = "+compChoice());
+                result();     
+            }
+            else if(amount==2)
+            {
+                console.log("u cliked on paper");
+                a= 2;
+                document.getElementById("random1").innerHTML="you selected Paper";
+                console.log("comp choice = "+compChoice());
+                result();     
+            }
+            else if(amount==3)
+            {
+                console.log("u cliked on sciccors");
+                a= 3;
+                document.getElementById("random1").innerHTML="you selected Scissors";
+                console.log("comp choice = "+compChoice());
+                result();     
+            }
+            else if(amount==4)
+            {
+                console.log("u cliked on lizard ");
+                a= 4;
+                document.getElementById("random1").innerHTML="you selected Lizard";
+                console.log("comp choice = "+compChoice());
+                result();     
+            }
+            else
+            {
+                console.log("u cliked on spork");
+                a = 5;
+                document.getElementById("random1").innerHTML="you selected Spork";
+                console.log("comp choice = "+compChoice());
+                result();     
+            }
+        }
+        
+        function result()
+        {
+            if(compChoice()==3 && a==2)
+            {
+                score++;
+                document.getElementById("computer-score").innerHTML=score;
+                document.getElementById("data").innerHTML="YOU LOST :' (";
+            }
+            else if(compChoice()==2 && a==1)
+            {
+                score++;
+                document.getElementById("computer-score").innerHTML=score;
+                document.getElementById("data").innerHTML="YOU LOST:' (";
+            }
+            else if(compChoice()==1 && a==4)
+            {
+                score++;
+                document.getElementById("computer-score").innerHTML=score;
+                document.getElementById("data").innerHTML="YOU LOST :' (";
+            }
+            else if(compChoice()==4 && a==5)
+            {
+                score++;
+                document.getElementById("computer-score").innerHTML=score;
+                document.getElementById("data").innerHTML="YOU LOST :' (";
+            }
+            else if(compChoice()==5 && a==3)
+            {
+                score++;
+                document.getElementById("computer-score").innerHTML=score;
+                document.getElementById("data").innerHTML="YOU LOST:' (";
+            }
+            else if(compChoice()==3 && a==4)
+            {
+                score++;
+                document.getElementById("computer-score").innerHTML=score;
+                document.getElementById("data").innerHTML="YOU LOST :' (";
+            }
+            else if(compChoice()==4 && a==2)
+            {
+                score++;
+                document.getElementById("computer-score").innerHTML=score;
+                document.getElementById("data").innerHTML="YOU LOST :' (";
+            }
+            else if(compChoice()==2 && a==5)
+            {
+                score++;
+                document.getElementById("computer-score").innerHTML=score;
+                document.getElementById("data").innerHTML="YOU LOST :' (";
+            }
+            else if(compChoice()==5 && a==1)
+            {
+                score++;
+                document.getElementById("computer-score").innerHTML=score;
+                document.getElementById("data").innerHTML="YOU LOST :' (";
+            }
+            else if(compChoice()==1 && a==3)
+            {
+                score++;
+                document.getElementById("computer-score").innerHTML=score;
+                document.getElementById("data").innerHTML="YOU LOST :' (";
+            }
+            else if (compChoice()==a)
+            {
+                document.getElementById("data").innerHTML="ITS A DRAW : |";  
+            }
+            else 
+            {
+                score1++;
+                document.getElementById("user-score").innerHTML=score1;
+                document.getElementById("data").innerHTML="YOU WIN : ))";
+            }
+
+            if(compChoice==1){
+                document.getElementById("random").innerHTML="Computer choose Rock!";
+            }
+            else if(compChoice==2){
+                document.getElementById("random").innerHTML="Computer choose Paper!";
+            }
+            else if(compChoice==3){
+                document.getElementById("random").innerHTML="Computer choose Scissors!";
+            }
+            else if(compChoice==4){
+                document.getElementById("random").innerHTML="Computer choose Lizard!";
+            }
+            else {
+                document.getElementById("random").innerHTML="Computer choose Sporks!";
+            }
+
+            
+        }
+        function close_alert()
+        {
+            let text ="Do you want to close this game?";
+            if(confirm(text)==true)
+            {
+                window.close();
+            }
+        }
+        function rules()
+        {
+            document.getElementById("main-container").innerHTML="<center><u><h1 style='color:black; font-family:Cambria;'>:RULES:</h1></u> <br><ul style='font-weight:500; font-size:20pt; font-family:Calisto MT; text-align:center;'><li>Scissors cuts Paper</li><li>Paper covers Rock</li><li>Rock crushes Lizard</li><li>Lizard poisons Sporks</li><li>Sporks smashes Scissors</li><li>Scissors decaplited Lizard</li><li>Lizard eats Paper</li><li>Paper disprovs Sporks</li><li>Spork vaporise Rock</li><li>Rock crushes Scissors</li></ul></center>";
+        }
+        </script>
+</head>
+<body>
+    <header>
+        <h1>Rock &nbsp; Paper &nbsp;  Scissors &nbsp; Lizard &nbsp;  Spork</h1>
+    </header>
+    <div class="score-board">
+        <div id="user-label" class="badge">USER</div>
+        <div id="computer-label" class="badge">COMP</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </div>
+    <div id="main-container">
+    <div class="result">
+         <p id="random" ></p>
+         <p id="random1"></p>
+        <p id="data">Lets start a New Game &#128515;</p>
+    </div>
+</br>
+<br>
+    <div class="choices">
+        <button type="button" class="choice" id="btn" onclick="demo(this)" value='1'  >
+            <UL>
+            <LI><img src=".\img\rocks.png" alt=""></LI>
+             <LI>ROCK</LI>
+            </UL>
+        </button>
+        <button type="button"  class="choice" id="btn" onclick="demo(this)" value='2'>
+            <ul>
+            <li><img src=".\img\papers.png" alt=""></li>
+            <li> PAPER</li>  
+            </ul>
+        </button>
+        <button type="button"  class="choice" id="btn" onclick="demo(this)" value='3'>
+           <UL>
+            <li><img src=".\img\sci.jpg" alt=""></li>
+            <li>SCISSORS</li>
+           </UL>
+        </button>
+        <button  type="button" class="choice" id="btn" onclick="demo(this)" value='4'>
+            <UL>
+            <LI><img src=".\img\liz.png" alt=""></LI>
+            <LI>LIZARD</LI>
+            </UL>
+        </button>
+        <button  type="button" class="choice" id="btn" onclick="demo(this)" value='5'>
+            <UL>
+            <LI><img src=".\img\spocks.png" alt=""></LI>
+            <LI>SPORK</LI>
+            </UL>
+        </button>
+    </div>
+    </div>
+    <div id="bottom-buttons">
+        
+        <button id="rules" type="button" onclick="rules()">Rules</button>
+        <button id="new-game" onclick="window.location.reload()">New Game</button>
+        <button id="close" onclick="close_alert()">Close</button>
+    </div>
+    
+    
+</body>
+</html>
